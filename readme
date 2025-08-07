@@ -1,0 +1,17 @@
+Primeiramente boa noite.
+
+para que você possa copiar para a vm, utilize o scp
+
+#copiar os arquivos para seu pc
+scp agi.py root@192.168.0.3:/usr/share/asterisk/agi-bin/ # obviamente trocando o meu ip pelo da sua máquina
+scp func.py root@192.168.0.3:/usr/share/asterisk/agi-bin/
+scp googletts.agi root@192.168.0.3:/usr/share/asterisk/agi-bin/
+scp extensions.conf root@192.168.0.3:/etc/asterisk/
+scp sip.conf root@192.168.0.3:/etc/asterisk/
+
+#na vm use:
+# necessário instalar o dos2unix
+# se não conseguir rodar instale os requisitos, pyst2, python 3, perl e etc. tem escrito no githu do googletts
+chmod +x /usr/share/asterisk/agi-bin/googletts.agi && chown asterisk:asterisk /usr/share/asterisk/agi-bin/googletts.agi
+chmod +x /usr/share/asterisk/agi-bin/agi.py && chown asterisk:asterisk /usr/share/asterisk/agi-bin/agi.py && dos2unix agi.py
+chmod +x /usr/share/asterisk/agi-bin/func.py && chown asterisk:asterisk /usr/share/asterisk/agi-bin/func.py && dos2unix func.py

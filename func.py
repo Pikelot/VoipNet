@@ -24,17 +24,18 @@ def pegar_bairro_cep(cep):
         return None
 
 def indicar_bairro_oferecer_plano(bairro):
-
-    match bairro:
         
-        case "Nossa Senhora da Apresentação":
-            return ("Temos o plano de 100gb")
+    if bairro == "Nossa Senhora da Apresentação":
+        return ("Temos o plano de 100 gigas")
 
-        case "Planalto":
-            return ("Temos o plano de 50gb")
+    elif bairro == "Planalto":
+        return ("Temos o plano de 50 gigas")
 
-        case "Alecrim":
-            return ("Temos o plano 25gb")
-        
-        case "Lagoa Azul":
-            return ("Temos o plano 300gb")
+    elif bairro == "Alecrim":
+        return ("Temos o plano 25 gigas")
+    
+    elif bairro == "Lagoa Azul":
+        return ("Temos o plano 300 gigas")
+    
+    else :
+        return ("Não temos nenhum plano estaremo desligando tenha uma boa noite")

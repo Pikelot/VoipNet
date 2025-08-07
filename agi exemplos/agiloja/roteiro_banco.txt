@@ -1,0 +1,18 @@
+instalar postgresql
+
+no psql#
+create database clientes;
+CREATE USER clientesuser WITH ENCRYPTED PASSWORD 'q1w2e3r4';
+grant ALL privileges on database clientes to clientesuser;
+
+no psql>
+CREATE TABLE lista (
+    codigo text,
+    nome text,
+    situacao text
+);
+
+insert into lista values ('11111','Alba das Dores','devedor');
+insert into lista values ('22222','Francisco Amoroso','pagador');
+insert into lista values ('33333','Jorge Tuite','devedor');
+insert into lista values ('44444','Renato Amargo','pagador');

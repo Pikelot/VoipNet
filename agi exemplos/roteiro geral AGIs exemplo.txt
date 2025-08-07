@@ -1,0 +1,35 @@
+AGI Google TTS
+
+apt install perl libwww-perl
+
+Baixar https://github.com/zaf/asterisk-googletts/archive/refs/heads/master.zip
+Descompactar e copiar googletts.agi para a pasta /usr/share/asterisk/agi-bin/
+Dar permissão de execução.
+
+No extensions.conf
+exten => 10001111,1,Answer()
+exten => 10001111,n,Agi(googletts.agi,"Agora eu posso falar qualquer coisa sem precisar gravar antes",pt-BR)
+exten => 10001111,n,Hangup()
+
+########################################################
+Para qualquer Agi em python 
+
+apt install python3-pip
+pip3 install pyst2
+
+########################################################
+AGI IVR
+Alternativa para fazer menus de atendimento usando python ao invés do próprio asterisk 
+
+########################################################
+AGI CEP
+Juntamos as duas coisas. 
+Python para consultar uma API e googletts para gerar voz em tempo real.
+
+########################################################
+AGI LOJA
+Usando Asterisk + AGI + python para realizar uma consulta a um banco de dados.
+
+Precisei instalar:
+apt install libpq-dev
+pip3 install psycopg2

@@ -1,0 +1,2 @@
+Baixar do github https://github.com/zaf/asterisk-googletts
+Seguir o manual 
